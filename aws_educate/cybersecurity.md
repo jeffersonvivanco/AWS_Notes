@@ -263,3 +263,91 @@ You can also perform the following cryptographic functions using AWS Key Managem
 * Generate data encryption keys that you can export from the service in plaintext or encrypted under a master key that
   doesn't have the service.
 * Generate random numbers suitable for cryptographic applications
+
+Amazon KMS uses symmetric key cryptography to perform encryption and decryption.
+
+The following credential types can access AWS KMS
+* AWS account root user
+* IAM role
+* IAM user
+
+### Security Threats
+AWS provides tools and features that enable you to see exactly what's happening in your AWS environment. This includes:
+* Deep visibility into API calls through AWS CloudTrail, including who, what, and from where calls were made
+* Log aggregation options, streamlining investigations and compliance reporting
+* Alert notifications through Amazon CloudWatch when specific events occur or thresholds are exceeded
+* Automated security assessments through Amazon Inspector that helps improve the security and compliance of applications
+  deployed on AWS.
+
+These tools and features give you the visibility you need to spot issues before they impact the business and allow
+you to improve security posture, and reduce the risk profile, of your environment.
+
+**AWS CloudTrail**
+AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS
+account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your
+AWS infrastructure. CloudTrail provides event history of your AWS account activity, including actions taken through
+the AWS Management Console, AWS SDKs, command line tools, and other AWS services.
+
+Here's how CloudTrail works
+![How Cloud Works](../assets/cloud_trail1.png)
+
+Security Analysis
+
+You can perform security analysis and detect user behavior patterns by ingesting AWS CloudTrail events into your
+log management and analytic solutions.
+![Security Analysis](../assets/cloud_trail_security.png)
+
+Operational Issue Troubleshooting
+
+You can troubleshoot operational issues by leveraging the AWS API call history produced by AWS
+CloudTrail. For example, you can quickly identify the most recent changes made to resources in your
+environment, including creation, modification, and deletion of AWS resources (e.g., Amazon EC2
+instances, Amazon VPC security groups, and Amazon EBS volumes).
+
+![Operational Issue Troubleshooting](../assets/cloud_trail_operational.png)
+
+**AWS CloudWatch**
+Amazon CloudWatch is a monitoring service for AWS cloud resources and the applications you run
+on AWS. You can use Amazon CloudWatch to collect and track metrics, collect and monitor log files,
+set alarms, and automatically react to changes in your AWS resources. You can use Amazon CloudWatch
+to gain system-wide visibility into resource utilization, application peformance, and operational
+health.
+
+Monitoring
+
+With Amazon CloudWatch, you can access up-to-the-minute statistics, view graphs, and set alarms
+for your metric data to help you troubleshoot, spot trends, and take automated action based on
+the state of your cloud environment. For example, you could set an alarm on the number of errors
+that occur in your system logs or view graphs of web request latencies from your application logs.
+You can view the original log data to see the source of the problem if needed.
+
+Creating Amazon CloudWatch Alarms
+
+You can create a CloudWatch alarm that watches a single metric. The alarm performs one or more
+actions based on the value of the metric relative to a threshold over a number of time periods.
+The action can be an Amazon EC2 action, an Auto Scaling action, or a notification sent to an
+Amazon SNS topic.
+
+**Amazon Inspector**
+Amazon Inspector is an automated security assessment service that helps improve the security
+and compliance of applications deployed on AWS. Amazon Inspector automatically assesses applications
+for vulnerabilities or deviations from best practices. After performing an assessment, Inspector
+produces a detailed list of security findings prioritized by level of severity. These findings can
+be reviewed directly or as part of detailed assessment reports which are available via the
+Amazon Inspector console or API.
+* You don't define your own rules for assessment templates with Amazon Inspector.
+
+### Intro to Cloud Compliance
+A properly secured environment results in a compliant environment. AWS Cloud Compliance enables
+customers to understand the robust controls in place at AWS to maintain security and data protection
+in the cloud. As systems are built on top of AWS cloud infrastructure, compliance responsibilities will
+be shared.
+
+**AWS Assurance Programs**
+AWS categorizes compliance programs by Certifications/Attestations, Laws, Regulations, and Privacy,
+and Alignments/Framworks.
+* Certifactions/Attestations are performed by a 3rd party independent auditor
+* Laws/Regulations/Privacy - AWS supports you by providing functionality (such as security features)
+  and enablers (including compliance playbooks, mapping documents, and whitepapers).
+* Compliance alignments and frameworks include published security or compliance requirements for
+  a specific purpose, such as a specific industry or function.
